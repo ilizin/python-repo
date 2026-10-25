@@ -54,14 +54,14 @@ The src folder contains the scripts, while the site folder holds the problem des
 └── python-repo
     │
     ├── src
-	│   ├── day_of_year.py
-	│   ├── is_prime.py
-	│   └── ...
-	│
+    │   ├── day_of_year.py
+    │   ├── is_prime.py
+    │   └── ...
+    │
     ├── site
     │   ├── day_of_year.md
-	│   ├── is_prime.md
-	│   └── ...   
-	│
+    │   ├── is_prime.md
+    │   └── ...   
+    │
     └── README.md          
 ```
