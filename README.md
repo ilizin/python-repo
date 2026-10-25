@@ -65,3 +65,7 @@ The src folder contains the scripts, while the site folder holds the problem des
     │
     └── README.md          
 ```
+
+## 🙌 Acknowledgments
+
+Thank you to [Edube Interactive and OpenEDG Python Institute](https://edube.org/) for promoting the Python programming language, training developers, and offering global certification standards.
