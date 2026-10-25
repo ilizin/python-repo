@@ -9,7 +9,12 @@ Find the problems description under the doc folder:
 * [Day of year](./doc/day_of_year.md)
 * [Is prime](./doc/is_prime.md)
 
-## 💾 Installation
+## Prerequisites
+
+* Make sure Python 3 is installed and working on your system (if not, see the next section).
+* Check if Python is in PATH, and add it if not. 
+
+## 💾 Python 3 Installation
 
 There are several ways to get your own copy of Python 3, depending on the operating system you use.
 
@@ -39,3 +44,24 @@ If Python 3 is absent, then refer to your Linux documentation in order to find o
 ### ¬ Linux
 
 All non-Linux users can download a copy at https://www.python.org/downloads/ .
+
+## 📂 Project structure 
+
+The src folder contains the scripts, while the site folder holds the problem descriptions.
+
+```
+/
+└── python-repo
+    │
+    ├── src
+	│   ├── day_of_year.py
+	│   ├── is_prime.py
+	│   └── ...
+	│
+    ├── site
+    │   ├── day_of_year.md
+	│   ├── is_prime.md
+	│   └── ...   
+	│
+    └── README.md          
+```
