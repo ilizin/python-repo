@@ -45,6 +45,15 @@ If Python 3 is absent, then refer to your Linux documentation in order to find o
 
 All non-Linux users can download a copy at https://www.python.org/downloads/ .
 
+## Usage
+
+* Open Your Terminal or Command Prompt.
+* Navigate to Your File's Location.
+* Run the Script.
+```
+python day_of_year.py
+```
+
 ## 📂 Project structure 
 
 The src folder contains the scripts, while the site folder holds the problem descriptions.
