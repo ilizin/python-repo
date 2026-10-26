@@ -10,6 +10,6 @@ Your task is to write a function checking whether a number is prime or not.
 
 The function:
 
-* is called is_prime
-* takes one argument (the value to check)
-* returns True if the argument is a prime number, and False otherwise
+* Is called is_prime.
+* Takes one argument (the value to check).
+* Returns True if the argument is a prime number, and False otherwise.
