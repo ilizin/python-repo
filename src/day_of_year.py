@@ -11,21 +11,18 @@ def is_year_leap(year):
 def days_in_month(year, month):
     if (month < 1 or month > 12):
         return None
-    days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if (month != 2):
-        return days[month - 1]
-    if (is_year_leap(year)):
-        return 29
-    else:
-        return 28
+    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if (month == 2 and is_year_leap(year)):
+        days[1] = 29
+    return days[month - 1]
 
 def day_of_year(year, month, day):
     if (month < 1 or month > 12):
         return None
-    days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if (month == 2 and is_year_leap(year)):
+        days[1] = 29
     if (day < 1 or day > days[month - 1]):
-        return None
-    if (month == 2 and (not is_year_leap(year)) and day > 28):
         return None
     day_of_year = 0
     for current_month in range(1, month):
