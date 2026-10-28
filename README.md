@@ -4,10 +4,10 @@ This repository is loaded with a bunch of programming exercises written in Pytho
 
 *Essential knowledge of python is required to understand this code.*
 
-Find the problems description under the doc folder:
+Find the problems description under the site folder:
 
-* [Day of year](./doc/day_of_year.md)
-* [Is prime](./doc/is_prime.md)
+* [Day of year](./site/day_of_year.md)
+* [Is prime](./site/is_prime.md)
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ All non-Linux users can download a copy at https://www.python.org/downloads/ .
 * Navigate to Your File's Location.
 * Run the Script.
 ```
-python day_of_year.py
+python3 day_of_year.py
 ```
 
 ## 📂 Project structure 
