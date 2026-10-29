@@ -1,4 +1,5 @@
 import random
+import time
 
 board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 moves = []
@@ -71,9 +72,10 @@ while(True):
         print("\nYou win!")
         break
     print()
+    time.sleep(3)
     move = computer_move(moves)
     moves.append(move)
-    print("The computer move is: ", move)
+    print("The computer move is:", move)
     print()
     board[(move - 1) // 3][(move % 3) - 1] = 'O'
     draw_board(board)
