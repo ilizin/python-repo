@@ -5,7 +5,12 @@ moves = []
 
 def draw_board(board):
     for row in board:
-        print("|", row[0], "|", row[1], "|", row[2], "|", sep="")
+        for cell in row:
+            printable_cell = " "
+            if (cell == 'X' or cell == 'O'):
+                printable_cell = cell
+            print("|", printable_cell, sep="", end="")
+        print("|")
  
 def computer_move(moves):
     move = random.randint(1, 9)
@@ -32,6 +37,11 @@ def check_win(board):
         return True  
         
 print()
+print("Welcome to Tic Tac Toe game")
+print()
+print("The player : X")
+print("The computer : O")
+print()
 while(True):
     try:
         move = int(input("Enter your next move: "))
@@ -54,7 +64,7 @@ while(True):
             break
         print()
     except ValueError:
-            print("The move is worong, please input a value from 1 to 9")
+            print("Your move is worong, please input a value from 1 to 9")
     
     
     
