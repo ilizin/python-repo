@@ -59,6 +59,7 @@ def player_move(move):
 print("\nReady for Tic Tac Toe? Let's play!")
 print("\nThe player : X")
 print("The computer : O")
+print("\nPlease select a value from 1 to 9 to put an X in the square.")
 draw_board(board, True)
 while(True):
     move = player_move(moves)
