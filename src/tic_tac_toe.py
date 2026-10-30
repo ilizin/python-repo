@@ -4,19 +4,24 @@ import time
 board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 moves = []
 
-def draw_board(board):
+def draw_board(board, only_printable):
+    print()
     for row in board:
         for cell in row:
-            printable_cell = " "
-            if (cell == 'X' or cell == 'O'):
-                printable_cell = cell
-            print("|", printable_cell, sep="", end="")
+            if (only_printable or cell == 'X' or cell == 'O'):
+                print("|", cell, sep="", end="") 
+            else:
+                print("|", " ", sep="", end="") 
         print("|")
  
 def computer_move(moves):
+    print("\nThe computer move is: ", end="")
+    time.sleep(2)
     move = random.randint(1, 9)
     while (move in moves):
         move = random.randint(1, 9)
+    moves.append(move)
+    print(move)
     return move
     
 def check_win(board):
@@ -40,49 +45,34 @@ def check_win(board):
 def player_move(move):
     while(True):
         try:
-            move = int(input("Enter your next move: "))
+            move = int(input("\nEnter your next move: "))
             if (move in moves):
-                print()
-                print("Your move is taken, please try again")
-                print()
-            if (move < 1 or move > 9):
-                print()
-                print("Your move is wrong, please input a value from 1 to 9")
-                print()
+                print("\nYour move is taken, please try again")
+            elif (move < 1 or move > 9):
+                print("\nYour move is wrong, please input a value from 1 to 9")
             else:   
+                moves.append(move)
                 return move
         except ValueError:
-            print()
-            print("Your move is wrong, please input a value from 1 to 9")  
-            print() 
+            print("\nYour move is wrong, please input a value from 1 to 9")  
             
-print()
-print("Welcome to Tic Tac Toe game")
-print()
-print("The player : X")
+print("\nReady for Tic Tac Toe? Let's play!")
+print("\nThe player : X")
 print("The computer : O")
-print()
+draw_board(board, True)
 while(True):
     move = player_move(moves)
-    moves.append(move)
-    print()
     board[(move - 1) // 3][(move % 3) - 1] = 'X'
-    draw_board(board)
+    draw_board(board, False)
     if check_win(board):
         print("\nYou win!")
         break
-    print()
-    time.sleep(3)
     move = computer_move(moves)
-    moves.append(move)
-    print("The computer move is:", move)
-    print()
     board[(move - 1) // 3][(move % 3) - 1] = 'O'
-    draw_board(board)
+    draw_board(board, False)
     if check_win(board):
-         print("\nComputer win!")
-         break
-    print()
+        print("\nComputer win!")
+        break
 
     
     
