@@ -8,6 +8,7 @@ Find the problems description under the site folder:
 
 * [Day of year](./site/day_of_year.md)
 * [Is prime](./site/is_prime.md)
+* [Tic Tac Toe](./site/tic_tac_toe.md)
 
 ## Prerequisites
 
