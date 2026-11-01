@@ -68,11 +68,17 @@ while(True):
     if check_win(board):
         print("\nYou win!")
         break
+    if (len(moves) == 9):
+        print("\nIt's a tie."")
+        break
     move = computer_move(moves)
     board[(move - 1) // 3][(move % 3) - 1] = 'O'
     draw_board(board, False)
     if check_win(board):
         print("\nComputer win!")
+        break
+    if (len(moves) == 9):
+        print("\nIt's a tie."")
         break
 
     
