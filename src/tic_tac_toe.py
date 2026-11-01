@@ -59,8 +59,9 @@ def player_move(move):
 print("\nReady for Tic Tac Toe? Let's play!")
 print("\nThe player : X")
 print("The computer : O")
-print("\nPlease select a value from 1 to 9 to put an X in the square.")
+print("\nPlease select a value from 1 to 9 to put an X in the square")
 draw_board(board, True)
+
 while(True):
     move = player_move(moves)
     board[(move - 1) // 3][(move % 3) - 1] = 'X'
@@ -78,7 +79,7 @@ while(True):
         print("\nComputer win!")
         break
     if (len(moves) == 9):
-        print("\nIt's a tie."")
+        print("\nIt's a tie!"")
         break
 
     
