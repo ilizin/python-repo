@@ -4,14 +4,16 @@ import time
 board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 moves = []
 
-def draw_board(board, only_printable):
+def draw_board(board, print_number = False):
     print()
     for row in board:
         for cell in row:
-            if (only_printable or cell == 'X' or cell == 'O'):
+            if print_number: 
+                print("|", cell, sep="", end="") 
+            elif (cell == 'X' or cell == 'O'):
                 print("|", cell, sep="", end="") 
             else:
-                print("|", " ", sep="", end="") 
+              print("|", " ", sep="", end="")   
         print("|")
  
 def computer_move(moves):
@@ -55,6 +57,9 @@ def player_move(move):
                 return move
         except ValueError:
             print("\nYour move is wrong, please input a value from 1 to 9")  
+
+def mark_square(marker, board):
+    board[(move - 1) // 3][(move % 3) - 1] = marker  
             
 print("\nReady for Tic Tac Toe? Let's play!")
 print("\nThe player : X")
@@ -64,22 +69,22 @@ draw_board(board, True)
 
 while(True):
     move = player_move(moves)
-    board[(move - 1) // 3][(move % 3) - 1] = 'X'
-    draw_board(board, False)
+    mark_square('X', board)
+    draw_board(board)
     if check_win(board):
         print("\nYou win!")
         break
     if (len(moves) == 9):
-        print("\nIt's a tie."")
+        print("\nIt's a tie.")
         break
     move = computer_move(moves)
-    board[(move - 1) // 3][(move % 3) - 1] = 'O'
-    draw_board(board, False)
+    mark_square('O', board)
+    draw_board(board)
     if check_win(board):
         print("\nComputer win!")
         break
     if (len(moves) == 9):
-        print("\nIt's a tie!"")
+        print("\nIt's a tie!")
         break
 
     
