@@ -8,9 +8,7 @@ def draw_board(board, print_number = False):
     print()
     for row in board:
         for cell in row:
-            if print_number: 
-                print("|", cell, sep="", end="") 
-            elif (cell == 'X' or cell == 'O'):
+            if print_number or cell == 'X' or cell == 'O': 
                 print("|", cell, sep="", end="") 
             else:
               print("|", " ", sep="", end="")   
