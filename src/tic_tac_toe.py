@@ -56,7 +56,7 @@ def player_move(move):
         except ValueError:
             print("\nYour move is wrong, please input a value from 1 to 9")  
 
-def mark_square(marker, board):
+def mark_square(marker, move, board):
     board[(move - 1) // 3][(move % 3) - 1] = marker  
             
 print("\nReady for Tic Tac Toe? Let's play!")
@@ -67,7 +67,7 @@ draw_board(board, True)
 
 while(True):
     move = player_move(moves)
-    mark_square('X', board)
+    mark_square('X', move, board)
     draw_board(board)
     if check_win(board):
         print("\nYou win!")
@@ -76,7 +76,7 @@ while(True):
         print("\nIt's a tie.")
         break
     move = computer_move(moves)
-    mark_square('O', board)
+    mark_square('O', move, board)
     draw_board(board)
     if check_win(board):
         print("\nComputer win!")
